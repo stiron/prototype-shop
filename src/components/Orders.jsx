@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import useActions from "../hooks/useActions";
 import useOrders from "../hooks/useOrders";
 import usePrototypes from "../hooks/usePrototypes";
+import CheckoutButton from "./CheckoutButton";
 
 export default function Orders() {
   const orders = useOrders();
@@ -28,7 +29,6 @@ export default function Orders() {
       </aside>
     );
   }
-
   return (
     <aside>
       <div className="order">
@@ -70,12 +70,14 @@ export default function Orders() {
               <i className="icon icon--delete" />
             </button>
           </div>
-          <button
+          <CheckoutButton />
+          {/* <button
             className="btn btn--secondary"
             style={{ width: "100%", marginTop: 10 }}
+            onClick={checkout}
           >
             Checkout
-          </button>
+          </button> */}
         </div>
       </div>
     </aside>

@@ -1,19 +1,30 @@
-import Header from "./components/Header";
-import Prototypes from "./components/Prototypes";
-import Orders from "./components/Orders";
-import Footer from "./components/Footer";
 import AppStateProvider from "./providers/AppStateProvider";
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Checkout from "./pages/Checkout";
+
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <AppStateProvider>
-      <Header />
-      <div className="container">
-        <Prototypes />
-        <Orders />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/Checkout" component={Checkout} />
+          <Route path="/" exact component={Home} />
+          <Route component={NotFound} />
+        </Switch>
+      </BrowserRouter>
     </AppStateProvider>
+
+    // <AppStateProvider>
+    //   <Header />
+    //   <div className="container">
+    //     <Prototypes />
+    //     <Orders />
+    //     <Footer />
+    //   </div>
+    // </AppStateProvider>
   );
 }
 
