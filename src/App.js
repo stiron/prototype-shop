@@ -2,10 +2,14 @@ import AppStateProvider from "./providers/AppStateProvider";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Checkout from "./pages/Checkout";
-
 import NotFound from "./pages/NotFound";
+import useReduxState from "./hooks/useReduxState";
+import useReduxDispatch from "./hooks/useReduxDispatch";
 
 function App() {
+  // const state = useReduxState();
+  // const dispatch = useReduxDispatch();
+
   return (
     <AppStateProvider>
       <BrowserRouter>

@@ -167,6 +167,17 @@ button {
   background: var(--gray);
   color: var(--primary);
 }
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.btn-group .btn {
+  margin-right: 10px;
+}
+.btn-group .btn .bin:last-child {
+  margin-right: 0px;
+}
 
 .container {
   margin-left: auto;

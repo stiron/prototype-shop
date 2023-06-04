@@ -1,0 +1,8 @@
+import { useContext } from "react";
+import AppStateContext from "../contexts/AppStateContext";
+
+export default function useReduxDispatch() {
+  const store = useContext(AppStateContext);
+
+  return store.dispatch;
+}
