@@ -31,7 +31,7 @@ export default function CheckoutButton() {
     // console.log(history);
     // navigate("/Checkout");
     history.push("/Checkout");
-    window.location.reload();
+    // window.location.reload();
     console.log("----체크아웃 페이지로 이동---------");
   }
   return (
