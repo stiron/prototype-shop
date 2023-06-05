@@ -5,7 +5,7 @@ export default function CancelButton() {
 
   function checkout() {
     history.push("/");
-    window.location.reload();
+    // window.location.reload();
     console.log("----홈 페이지로 이동---------");
   }
   return (

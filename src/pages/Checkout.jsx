@@ -29,6 +29,7 @@ export default function Checkout() {
   //   }
   return (
     <aside>
+      <div className="title">Checkout</div>
       <div className="order">
         <div className="body">
           {orders.map((order) => {
